@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Class Timetable</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:40px;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#4a2c82;
+    margin-bottom:5px;
+}
+
+.details{
+    text-align:center;
+    margin-bottom:25px;
+    color:#444;
+    font-size:16px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    border:3px solid #4a2c82;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+caption{
+    font-size:24px;
+    font-weight:bold;
+    color:#4a2c82;
+    padding:12px;
+}
+
+th,td{
+    border:1px solid #999;
+    padding:15px;
+    text-align:center;
+}
+
+th{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f7f4ff;
+}
+
+td:hover{
+    transform:scale(1.03);
+    transition:.3s;
+    color:white;
+}
+
+.java{
+    background:#ffd6d6;
+    font-weight:bold;
+}
+
+.java:hover{
+    background:#d62828;
+}
+
+.web{
+    background:#d6f3ff;
+    font-weight:bold;
+}
+
+.web:hover{
+    background:#0077b6;
+}
+
+.cn{
+    background:#d8ffd8;
+    font-weight:bold;
+}
+
+.cn:hover{
+    background:#2d6a4f;
+}
+
+.math{
+    background:#fff3b0;
+    font-weight:bold;
+}
+
+.math:hover{
+    background:#d4a017;
+}
+
+.lab{
+    background:#c8f7c5;
+    font-weight:bold;
+}
+
+.lab:hover{
+    background:#2b9348;
+}
+
+.lunch{
+    background:#ffe08a;
+    font-weight:bold;
+    color:#7a5200;
+}
+
+.lunch:hover{
+    background:#f4a261;
+}
+
+.legend{
+    width:45%;
+    margin-top:30px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    color:#555;
+    font-size:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Saveetha School of Engineering</h1>
+
+<div class="details">
+<b>Name:</b> Keerthikaa N &nbsp; | &nbsp;
+<b>Register No:</b> 192521064 &nbsp; | &nbsp;
+<b>Course:</b> B.Tech Information Technology &nbsp; | &nbsp;
+<b>Semester:</b> II
+</div>
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<caption>📅 Weekly Class Timetable</caption>
+
+<tr>
+<th>Day / Time</th>
+<th>8:00 - 12:00</th>
+<th>12:00 - 1:00</th>
+<th>1:00 - 3:00</th>
+</tr>
+
+<tr>
+<th>Monday</th>
+<td class="java">Programming in Java</td>
+<td class="lunch">Lunch Break</td>
+<td class="cn">Computer Networks</td>
+</tr>
+
+<tr>
+<th>Tuesday</th>
+<td class="web">Web Technology</td>
+<td class="lunch">Lunch Break</td>
+<td class="math">Probabilistic Methods with Linear Algebra</td>
+</tr>
+
+<tr>
+<th>Wednesday</th>
+<td class="lab" rowspan="2">Programming in Java Lab</td>
+<td class="lunch">Lunch Break</td>
+<td class="java">Programming in Java</td>
+</tr>
+
+<tr>
+<th>Thursday</th>
+<td class="lunch">Lunch Break</td>
+<td class="web">Web Technology</td>
+</tr>
+
+<tr>
+<th>Friday</th>
+<td colspan="2" class="lab">Computer Networks Lab</td>
+<td class="math">Probabilistic Methods with Linear Algebra</td>
+</tr>
+
+</table>
+
+<br>
+
+<table class="legend" border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th colspan="2">Legend</th>
+</tr>
+
+<tr>
+<td class="java">Programming in Java</td>
+<td>Java Theory Class</td>
+</tr>
+
+<tr>
+<td class="web">Web Technology</td>
+<td>Web Development Class</td>
+</tr>
+
+<tr>
+<td class="cn">Computer Networks</td>
+<td>Networking Concepts</td>
+</tr>
+
+<tr>
+<td class="math">Probabilistic Methods with Linear Algebra</td>
+<td>Mathematics</td>
+</tr>
+
+<tr>
+<td class="lab">Lab Session</td>
+<td>Practical Class</td>
+</tr>
+
+<tr>
+<td class="lunch">Lunch Break</td>
+<td>12:00 PM - 1:00 PM</td>
+</tr>
+
+</table>
+
+<div class="footer">
+Designed by <b>Keerthikaa N</b> © 2026
+</div>
+
+</div>
+
+</body>
+</html>
