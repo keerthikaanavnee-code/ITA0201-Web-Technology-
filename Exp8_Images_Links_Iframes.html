@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exp 8 - Images, Hyperlinks &amp; Iframes</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    margin:0; padding:40px;
+  }
+  .container {
+    max-width: 850px; margin:auto; background:#fff;
+    border-radius:18px; padding:30px 40px; box-shadow:0 12px 25px rgba(0,0,0,0.2);
+  }
+  h1 { text-align:center; color:#5e548e; }
+  h2 { color:#9d4edd; border-bottom: 2px solid #e0aaff; padding-bottom:6px; }
+  .gallery { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+  .gallery img {
+    width: 220px; height:150px; object-fit:cover;
+    border-radius:12px; border:4px solid #e0aaff;
+    box-shadow:0 6px 14px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .gallery img:hover { transform: scale(1.05); }
+  .links a {
+    display:inline-block; margin:6px 10px 6px 0;
+    padding:8px 16px; background:#9d4edd; color:white;
+    border-radius: 20px; text-decoration:none; font-weight:600;
+  }
+  .links a:hover { background:#5e548e; }
+  iframe {
+    width:100%; height:350px; border:4px solid #9d4edd;
+    border-radius:12px; margin-top:10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Images, Hyperlinks &amp; Iframes Demo</h1>
+
+  <h2>Image Gallery</h2>
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1015/400/300" alt="Mountain landscape" width="220" height="150">
+    <img src="https://picsum.photos/id/1025/400/300" alt="A dog outdoors" width="220" height="150">
+    <img src="https://picsum.photos/id/1035/400/300" alt="Forest path" width="220" height="150">
+  </div>
+
+  <h2>Useful Links</h2>
+  <div class="links">
+    <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a>
+    <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+    <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+  </div>
+
+  <h2>Embedded External Page (Iframe)</h2>
+  <iframe src="https://en.wikipedia.org/wiki/HTML" title="Wikipedia HTML page"></iframe>
+</div>
+</body>
+</html>
