@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(-45deg,#43cea2,#185a9d,#6dd5ed,#23a6d5);
+    background-size:400% 400%;
+    animation:bgAnimation 12s ease infinite;
+    padding:40px;
+}
+
+@keyframes bgAnimation{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:100%;
+    max-width:520px;
+}
+
+form{
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:popup .8s ease;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.avatar{
+    font-size:65px;
+    text-align:center;
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-top:10px;
+    margin-bottom:25px;
+    text-shadow:2px 2px 8px black;
+}
+
+label{
+    display:block;
+    margin-top:16px;
+    font-weight:bold;
+    color:white;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:7px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    font-size:15px;
+    transition:.3s;
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+}
+
+input:hover,
+select:hover,
+textarea:hover{
+    transform:scale(1.02);
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    transform:scale(1.02);
+    box-shadow:0 0 15px #00ffd9;
+}
+
+::placeholder{
+    color:#888;
+}
+
+.radio-group,
+.checkbox-group{
+    margin-top:10px;
+    color:white;
+}
+
+.radio-group label,
+.checkbox-group label{
+    display:inline-block;
+    margin-right:15px;
+    font-weight:normal;
+}
+
+textarea{
+    resize:none;
+    height:80px;
+}
+
+.btn-row{
+    display:flex;
+    gap:15px;
+    margin-top:28px;
+}
+
+button{
+    flex:1;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.submit-btn{
+    background:linear-gradient(135deg,#00c9a7,#005bea);
+    color:white;
+}
+
+.reset-btn{
+    background:white;
+    color:#333;
+}
+
+button:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+.success{
+    display:none;
+    margin-top:20px;
+    text-align:center;
+    color:white;
+    background:rgba(0,150,0,.7);
+    padding:12px;
+    border-radius:10px;
+    animation:popup .5s;
+}
+
+@media(max-width:600px){
+
+form{
+padding:25px;
+}
+
+.btn-row{
+flex-direction:column;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<form id="registerForm">
+
+<div class="avatar">🎓</div>
+
+<h1>Student Registration Portal</h1>
+
+<label>👤 Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+
+<label>🆔 Student ID</label>
+<input type="text" placeholder="Enter Student ID" required>
+
+<label>📧 Email Address</label>
+<input type="email" placeholder="example@gmail.com" required>
+
+<label>🔒 Password</label>
+<input type="password" placeholder="Create Password" required>
+
+<label>📞 Phone Number</label>
+<input type="tel" placeholder="9876543210" required>
+
+<label>🎂 Age</label>
+<input type="number" min="16" max="60" required>
+
+<label>📅 Date of Birth</label>
+<input type="date" required>
+
+<label>⚧ Gender</label>
+
+<div class="radio-group">
+<label><input type="radio" name="gender" checked> Male</label>
+<label><input type="radio" name="gender"> Female</label>
+<label><input type="radio" name="gender"> Other</label>
+</div>
+
+<label>💻 Interests</label>
+
+<div class="checkbox-group">
+<label><input type="checkbox"> Coding</label>
+<label><input type="checkbox"> Sports</label>
+<label><input type="checkbox"> Music</label>
+<label><input type="checkbox"> Gaming</label>
+</div>
+
+<label>🎓 Department</label>
+
+<select>
+<option>Computer Science</option>
+<option>Information Technology</option>
+<option>Electronics</option>
+<option>Mechanical</option>
+<option>Civil</option>
+<option>Artificial Intelligence</option>
+<option>Cyber Security</option>
+</select>
+
+<label>🏠 Address</label>
+
+<textarea placeholder="Enter your address"></textarea>
+
+<div class="btn-row">
+
+<button type="submit" class="submit-btn">
+🚀 Submit
+</button>
+
+<button type="reset" class="reset-btn">
+🔄 Reset
+</button>
+
+</div>
+
+<div class="success" id="successMessage">
+✅ Registration Submitted Successfully!
+</div>
+
+</form>
+
+</div>
+
+<script>
+
+const form = document.getElementById("registerForm");
+const success = document.getElementById("successMessage");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    success.style.display = "block";
+
+    setTimeout(function(){
+
+        success.style.display = "none";
+
+        form.reset();
+
+    },3000);
+
+});
+
+</script>
+
+</body>
+</html>
