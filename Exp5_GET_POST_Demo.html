@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Railway Reservation Portal - GET & POST Demo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(-45deg,#003566,#0077b6,#00b4d8,#90e0ef);
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+padding:30px;
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+margin-bottom:30px;
+overflow:hidden;
+position:relative;
+
+}
+
+.header h1{
+color:white;
+font-size:38px;
+margin-bottom:10px;
+text-shadow:2px 2px 5px black;
+}
+
+.header p{
+color:white;
+font-size:18px;
+}
+
+.train{
+
+font-size:45px;
+position:relative;
+animation:trainMove 8s linear infinite;
+
+}
+
+@keyframes trainMove{
+
+0%{
+left:-45%;
+}
+
+100%{
+left:45%;
+}
+
+}
+
+.cards{
+
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.card{
+
+flex:1;
+min-width:420px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.get{
+border-top:8px solid #ffb703;
+}
+
+.post{
+border-top:8px solid #06d6a0;
+}
+
+.card h2{
+
+color:white;
+margin-bottom:20px;
+text-align:center;
+
+}
+
+label{
+
+display:block;
+margin-top:15px;
+color:white;
+font-weight:bold;
+
+}
+
+input,
+select{
+
+width:100%;
+padding:12px;
+margin-top:7px;
+border:none;
+border-radius:10px;
+font-size:15px;
+outline:none;
+transition:.3s;
+
+}
+
+input:hover,
+select:hover{
+
+transform:scale(1.02);
+
+}
+
+input:focus,
+select:focus{
+
+box-shadow:0 0 12px cyan;
+
+}
+
+button{
+
+width:100%;
+padding:14px;
+margin-top:25px;
+border:none;
+border-radius:12px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.get button{
+
+background:#ffb703;
+color:#222;
+
+}
+
+.post button{
+
+background:#06d6a0;
+color:white;
+
+}
+
+button:hover{
+
+transform:translateY(-4px) scale(1.03);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+.result{
+
+display:none;
+margin-top:25px;
+padding:18px;
+background:white;
+border-radius:12px;
+font-size:15px;
+line-height:1.8;
+
+}
+
+.table-section{
+
+margin-top:40px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.table-section h2{
+
+color:white;
+text-align:center;
+margin-bottom:20px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:12px;
+overflow:hidden;
+
+}
+
+th{
+
+background:#003566;
+color:white;
+padding:14px;
+
+}
+
+td{
+
+padding:12px;
+text-align:center;
+border:1px solid #ddd;
+
+}
+
+.note{
+
+margin-top:35px;
+background:rgba(255,255,255,.18);
+padding:25px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+color:white;
+line-height:1.8;
+
+}
+
+footer{
+
+margin-top:30px;
+text-align:center;
+color:white;
+font-size:15px;
+
+}
+
+@media(max-width:900px){
+
+.cards{
+
+flex-direction:column;
+
+}
+
+.card{
+
+min-width:100%;
+
+}
+
+.header h1{
+
+font-size:28px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="train">🚆🚃🚃🚃</div>
+
+<h1>Indian Railway Reservation Portal</h1>
+
+<p>Demonstration of GET and POST Methods Using HTML Forms</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card get">
+
+<h2>🔍 Search Train (GET)</h2>
+
+<form method="get">
+
+<label>From Station</label>
+<input type="text" name="from" placeholder="Eg. Chennai" required>
+
+<label>To Station</label>
+<input type="text" name="to" placeholder="Eg. Madurai" required>
+
+<label>Journey Date</label>
+<input type="date" name="date" required>
+
+<button type="submit">
+🔎 Search Trains
+</button>
+
+</form>
+<div class="card post">
+
+<h2>🎟 Book Ticket (POST)</h2>
+
+<form id="postForm" method="post">
+
+<label>Passenger Name</label>
+<input type="text" id="pname" placeholder="Enter Passenger Name" required>
+
+<label>Age</label>
+<input type="number" id="age" min="1" max="120" placeholder="Enter Age" required>
+
+<label>Train Number</label>
+<input type="text" id="trainNo" placeholder="Eg. 12627" required>
+
+<label>Class</label>
+<select id="travelClass">
+    <option>SL - Sleeper</option>
+    <option>3A - AC 3 Tier</option>
+    <option>2A - AC 2 Tier</option>
+    <option>1A - First AC</option>
+    <option>CC - Chair Car</option>
+</select>
+
+<label>Mobile Number</label>
+<input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+
+<button type="submit">
+🎫 Book Ticket
+</button>
+
+</form>
+
+<div class="result" id="postResult"></div>
+
+</div>
+
+</div>
+
+<div class="result" id="getResult"></div>
+
+<div class="table-section">
+
+<h2>📊 GET vs POST Comparison</h2>
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>GET Method</th>
+<th>POST Method</th>
+</tr>
+
+<tr>
+<td>Purpose</td>
+<td>Search Data</td>
+<td>Submit Data</td>
+</tr>
+
+<tr>
+<td>Data Location</td>
+<td>Visible in URL</td>
+<td>Sent in Request Body</td>
+</tr>
+
+<tr>
+<td>Security</td>
+<td>Less Secure</td>
+<td>More Secure</td>
+</tr>
+
+<tr>
+<td>Bookmark</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Used In</td>
+<td>Train Search</td>
+<td>Ticket Booking</td>
+</tr>
+
+<tr>
+<td>URL Changes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="note">
+
+<h2>📝 Observation</h2>
+
+<br>
+
+<p>
+When the <b>Search Train</b> form is submitted using the
+<b>GET</b> method, the entered values are appended to the
+browser URL as query parameters. This makes the data visible
+in the address bar and allows the page to be bookmarked.
+</p>
+
+<br>
+
+<p>
+When the <b>Book Ticket</b> form is submitted using the
+<b>POST</b> method, passenger details are sent in the request
+body. Therefore, the URL remains unchanged, making POST more
+suitable for sending sensitive information.
+</p>
+
+</div>
+
+<footer>
+
+🚆 HTML Experiment 5 — Demonstration of GET and POST Methods Using Railway Reservation Portal
+
+</footer>
+
+<script>
+
+window.onload=function(){
+
+const params=new URLSearchParams(window.location.search);
+
+if(params.has("from")){
+
+const result=document.getElementById("getResult");
+
+result.style.display="block";
+
+result.innerHTML=
+"<h3>🚆 GET Method Result</h3><br>" +
+"<b>From Station:</b> "+params.get("from")+"<br>" +
+"<b>To Station:</b> "+params.get("to")+"<br>" +
+"<b>Journey Date:</b> "+params.get("date")+"<br><br>" +
+"<b>URL:</b><br><code>"+window.location.href+"</code>";
+
+}
+
+}
+
+document.getElementById("postForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name=document.getElementById("pname").value;
+const age=document.getElementById("age").value;
+const train=document.getElementById("trainNo").value;
+const cls=document.getElementById("travelClass").value;
+const mobile=document.getElementById("mobile").value;
+
+const result=document.getElementById("postResult");
+
+result.style.display="block";
+
+result.innerHTML=
+"<h3>🎟 POST Method Result</h3><br>"+
+"<b>Passenger:</b> "+name+"<br>"+
+"<b>Age:</b> "+age+"<br>"+
+"<b>Train No:</b> "+train+"<br>"+
+"<b>Class:</b> "+cls+"<br>"+
+"<b>Mobile:</b> "+mobile+"<br><br>"+
+"<b>Observation:</b> Data is submitted using the POST method. The URL remains unchanged.";
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
