@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIMATS School of Engineering - Admission</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>🏫 SIMATS School of Engineering</h1>
+
+<p>Online Admission Registration Portal</p>
+
+</header>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="courses.html">Courses</a>
+<a href="registration.html" class="active">Admission</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<main>
+
+<h2>Admission Registration Form</h2>
+
+<p>
+
+Complete the admission form below to apply for your preferred
+engineering program.
+
+</p>
+
+<form onsubmit="submitForm(event)">
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name" required>
+
+<label>Email Address</label>
+<input type="email" placeholder="Enter your email" required>
+
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter your mobile number" required>
+
+<label>Date of Birth</label>
+<input type="date" required>
+
+<label>Gender</label>
+
+<div style="margin-top:10px;">
+
+<input type="radio" name="gender" required> Male
+
+<input type="radio" name="gender"> Female
+
+<input type="radio" name="gender"> Other
+
+</div>
+
+<label>Department</label>
+
+<select required>
+
+<option value="">Select Department</option>
+
+<option>Computer Science & Engineering</option>
+
+<option>Artificial Intelligence & Data Science</option>
+
+<option>Electronics & Communication Engineering</option>
+
+<option>Electrical & Electronics Engineering</option>
+
+<option>Mechanical Engineering</option>
+
+<option>Civil Engineering</option>
+
+</select>
+
+<label>Higher Secondary Percentage</label>
+
+<input type="number" placeholder="Enter your percentage" required>
+
+<label>Address</label>
+
+<textarea rows="5" placeholder="Enter your address"></textarea>
+
+<label>Upload Passport Size Photo</label>
+
+<input type="file" accept="image/*">
+
+<label>Upload Marksheet</label>
+
+<input type="file">
+
+<div style="margin-top:20px;">
+
+<input type="checkbox" required>
+
+I hereby declare that all the information provided is true to the best
+of my knowledge.
+
+</div>
+
+<button type="submit">
+
+Submit Application
+
+</button>
+
+<button type="reset">
+
+Reset Form
+
+</button>
+
+</form>
+
+</main>
+
+<footer>
+
+<p>
+
+© 2026 SIMATS School of Engineering | Chennai, Tamil Nadu
+
+</p>
+
+</footer>
+
+<script>
+
+function submitForm(event){
+
+event.preventDefault();
+
+alert("🎉 Your admission application has been submitted successfully!");
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Creative Art Gallery - XHTML Compliant</title>
+
+<style type="text/css">
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+
+background:linear-gradient(-45deg,#edf6f9,#d8e2dc,#f6fff8,#e9edc9);
+background-size:400% 400%;
+animation:bgmove 12s ease infinite;
+padding:40px;
+
+}
+
+@keyframes bgmove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+div.container{
+
+max-width:1200px;
+margin:auto;
+
+}
+
+div.header{
+
+background:rgba(255,255,255,0.82);
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 12px 25px rgba(0,0,0,.18);
+margin-bottom:35px;
+
+}
+
+div.palette{
+
+font-size:70px;
+animation:float 2.5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0px);}
+
+50%{transform:translateY(-10px);}
+
+100%{transform:translateY(0px);}
+
+}
+
+div.header h1{
+
+font-size:42px;
+color:#2f3e46;
+margin-top:10px;
+
+}
+
+div.header p{
+
+margin-top:12px;
+font-size:18px;
+color:#52796f;
+
+}
+
+div.about{
+
+background:rgba(255,255,255,.85);
+padding:30px;
+border-radius:22px;
+box-shadow:0 10px 22px rgba(0,0,0,.15);
+margin-bottom:35px;
+
+}
+
+div.about h2{
+
+color:#344e41;
+margin-bottom:15px;
+
+}
+
+div.about p{
+
+color:#555555;
+line-height:1.9;
+font-size:17px;
+
+}
+
+hr{
+
+border:0;
+height:3px;
+background:#84a98c;
+margin:35px 0px;
+
+}
+
+div.gallery{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+
+}
+
+div.card{
+
+width:320px;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 22px rgba(0,0,0,.18);
+transition:.4s;
+
+}
+
+div.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+div.card img{
+
+width:100%;
+height:230px;
+display:block;
+transition:.4s;
+
+}
+
+div.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+div.card h3{
+
+padding-top:15px;
+text-align:center;
+color:#344e41;
+
+}
+
+div.card p{
+
+padding:15px;
+text-align:center;
+line-height:1.8;
+color:#666666;
+
+}
+
+div.artist{
+
+margin-top:40px;
+background:rgba(255,255,255,.85);
+padding:30px;
+border-radius:22px;
+box-shadow:0 10px 22px rgba(0,0,0,.15);
+
+}
+
+div.artist h2{
+
+color:#344e41;
+margin-bottom:15px;
+
+}
+
+div.artist p{
+
+line-height:1.9;
+color:#555555;
+
+}
+
+div.rules{
+
+margin-top:35px;
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 22px rgba(0,0,0,.15);
+
+}
+
+div.rules h2{
+
+color:#344e41;
+margin-bottom:15px;
+
+}
+
+div.rules ul{
+
+margin-left:25px;
+line-height:2;
+
+}
+
+div.footer{
+
+margin-top:35px;
+text-align:center;
+color:#344e41;
+font-weight:bold;
+
+}
+
+@media screen and (max-width:900px){
+
+div.gallery{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+div.card{
+
+width:90%;
+
+}
+
+div.header h1{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="palette">🎨</div>
+
+<h1>Creative Art Gallery</h1>
+
+<p>
+Explore timeless paintings, digital masterpieces and artistic imagination.
+</p>
+
+</div>
+
+<div class="about">
+
+<h2>📖 About Our Gallery</h2>
+
+<p>
+
+The Creative Art Gallery is a collection of beautiful paintings,
+digital illustrations and artistic sketches created to inspire creativity.
+This webpage is designed using XHTML 1.0 Strict standards by following
+lowercase tags, properly nested elements, quoted attributes and self-closing
+empty tags wherever required.
+
+</p>
+
+</div>
+
+<hr />
+
+<div class="gallery">
+  <div class="card">
+
+<a href="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5" target="_blank">
+    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600" alt="Nature Painting" />
+</a>
+
+<h3>🌄 Nature's Beauty</h3>
+
+<p>
+
+A peaceful landscape inspired by mountains,
+rivers and colourful sunsets that reflect the
+beauty of nature.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<a href="https://images.unsplash.com/photo-1541961017774-22349e4a1262" target="_blank">
+    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600" alt="Abstract Painting" />
+</a>
+
+<h3>🎭 Abstract Expression</h3>
+
+<p>
+
+A vibrant abstract artwork created with bold
+shapes, colourful patterns and unlimited
+imagination.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<a href="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b" target="_blank">
+    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600" alt="Digital Art" />
+</a>
+
+<h3>💻 Digital Illustration</h3>
+
+<p>
+
+A modern digital painting showcasing creativity,
+technology and artistic innovation through digital
+design.
+
+</p>
+
+</div>
+
+</div>
+
+<hr />
+
+<div class="artist">
+
+<h2>👩‍🎨 Artist Spotlight</h2>
+
+<p>
+
+Every masterpiece begins with a simple idea.
+Our artists transform imagination into beautiful
+works of art using traditional painting, sketching
+and modern digital illustration techniques.
+
+</p>
+
+<br />
+
+<p>
+
+"Art enables us to find ourselves and lose ourselves
+at the same time."
+
+</p>
+
+</div>
+
+<div class="about">
+
+<h2>🖼️ Featured Collections</h2>
+
+<p>
+
+Our gallery features different categories of artwork
+including landscapes, portraits, abstract paintings,
+digital illustrations and creative sketches. Each
+collection celebrates unique artistic styles and
+creative expression.
+
+</p>
+
+</div>
+
+<hr />
+
+<div class="about">
+
+<h2>📩 Visit Our Gallery</h2>
+
+<p>
+
+📍 Chennai, Tamil Nadu
+
+<br />
+
+📧 creativegallery@example.com
+
+<br />
+
+📞 +91 98765 43210
+
+<br />
+
+🕒 Monday - Saturday : 10:00 AM - 6:00 PM
+
+</p>
+
+</div>
+<div class="rules">
+
+<h2>✅ XHTML Compliance Checklist</h2>
+
+<table style="width:100%; border-collapse:collapse; text-align:center;">
+
+<tr style="background:#84a98c; color:white;">
+
+<th style="padding:12px;">Rule</th>
+
+<th style="padding:12px;">Status</th>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+Lowercase Tags
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+Properly Closed Tags
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+Quoted Attributes
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+Proper Nesting
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+Self-closing Empty Tags
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+<tr>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+XHTML 1.0 Strict DOCTYPE
+</td>
+
+<td style="padding:12px; border:1px solid #cccccc;">
+✔ Followed
+</td>
+
+</tr>
+
+</table>
+
+<br />
+
+<h2>📌 XHTML Rules Used</h2>
+
+<ul>
+
+<li>All XHTML tags are written in lowercase.</li>
+
+<li>Every opening tag has a corresponding closing tag.</li>
+
+<li>All attribute values are enclosed in quotation marks.</li>
+
+<li>Elements are properly nested without overlapping.</li>
+
+<li>Empty elements such as <code>&lt;br /&gt;</code>, <code>&lt;hr /&gt;</code> and <code>&lt;img /&gt;</code> are self-closed.</li>
+
+<li>The document includes the XHTML namespace and XHTML 1.0 Strict DOCTYPE.</li>
+
+</ul>
+
+</div>
+
+<div class="footer">
+
+<hr />
+
+<p>
+
+🎨 Creative Art Gallery
+
+<br />
+
+Designed as an XHTML 1.0 Strict Compliant Web Page
+
+<br />
+
+Experiment 6 - Web Technology Laboratory
+
+</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

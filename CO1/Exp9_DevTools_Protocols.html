@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ShopEasy - Developer Tools Demo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#EAF4F4,#F8F9FA,#FFF8E7);
+padding:35px;
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+
+}
+
+.header{
+
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.header h1{
+
+color:#15616D;
+font-size:42px;
+
+}
+
+.header p{
+
+margin-top:10px;
+color:#555;
+font-size:18px;
+
+}
+
+.search{
+
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:10px;
+
+}
+
+.search input{
+
+width:60%;
+padding:12px;
+font-size:16px;
+border:2px solid #83C5BE;
+border-radius:10px;
+outline:none;
+
+}
+
+.search button{
+
+padding:12px 20px;
+border:none;
+background:#006D77;
+color:white;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.search button:hover{
+
+background:#00505A;
+
+}
+
+.instructions{
+
+margin-top:30px;
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+}
+
+.instructions h2{
+
+color:#006D77;
+margin-bottom:15px;
+
+}
+
+.instructions ol{
+
+padding-left:25px;
+line-height:2;
+
+}
+
+.products{
+
+margin-top:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:15px;
+color:#006D77;
+
+}
+
+.card p{
+
+padding:0px 15px 15px;
+color:#555;
+line-height:1.6;
+
+}
+
+.card button{
+
+width:90%;
+margin:15px;
+padding:12px;
+border:none;
+background:#006D77;
+color:white;
+border-radius:10px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.card button:hover{
+
+background:#00505A;
+
+}
+
+.log{
+
+margin-top:35px;
+background:#1E293B;
+color:#67E8F9;
+padding:25px;
+border-radius:18px;
+font-family:Consolas,monospace;
+min-height:120px;
+white-space:pre-wrap;
+
+}
+
+.footer{
+
+margin-top:30px;
+text-align:center;
+color:#555;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>🛒 ShopEasy</h1>
+
+<p>
+
+Online Shopping Portal - Observe Network Requests using Browser Developer Tools
+
+</p>
+
+<div class="search">
+
+<input type="text" placeholder="Search products..." />
+
+<button>Search</button>
+
+</div>
+
+</div>
+
+<div class="instructions">
+
+<h2>📖 How to Perform the Experiment</h2>
+
+<ol>
+
+<li>Open Browser Developer Tools (Press F12).</li>
+
+<li>Select the <b>Network</b> tab.</li>
+
+<li>Click any product button below.</li>
+
+<li>Observe the URL, Request Method, Protocol, Status Code, File Type, Size and Loading Time.</li>
+
+</ol>
+
+</div>
+
+<div class="products">
+  <div class="card">
+
+<img src="https://picsum.photos/300/220?random=1" alt="Laptop">
+
+<h3>💻 Gaming Laptop</h3>
+
+<p>Click below to simulate loading product information.</p>
+
+<button onclick="loadProduct()">
+
+Load Product
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/220?random=2" alt="Headphones">
+
+<h3>🎧 Wireless Headphones</h3>
+
+<p>Load a product image request.</p>
+
+<button onclick="loadImage()">
+
+Load Image
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/220?random=3" alt="Smart Watch">
+
+<h3>⌚ Smart Watch</h3>
+
+<p>Simulate adding this product to the shopping cart.</p>
+
+<button onclick="addCart()">
+
+Add to Cart
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://picsum.photos/300/220?random=4" alt="Mobile">
+
+<h3>📱 Smartphone</h3>
+
+<p>Simulate placing an online order.</p>
+
+<button onclick="checkout()">
+
+Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<div class="log" id="log">
+
+Ready...
+
+Open Developer Tools → Network tab.
+
+Now click any product button above.
+
+</div>
+
+<div class="footer">
+
+<h3>Developer Tools Observation</h3>
+
+<p>
+
+✔ URL &nbsp;&nbsp;
+
+✔ Request Method &nbsp;&nbsp;
+
+✔ Protocol &nbsp;&nbsp;
+
+✔ Status Code &nbsp;&nbsp;
+
+✔ File Type &nbsp;&nbsp;
+
+✔ Size &nbsp;&nbsp;
+
+✔ Loading Time
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const log=document.getElementById("log");
+
+function loadProduct(){
+
+log.innerHTML="Loading Product Details...";
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+log.innerHTML=
+
+"✔ Product Loaded Successfully\n\n"+
+
+"Request Method : GET\n"+
+
+"Status Code : 200\n\n"+
+
+"Now check the Network tab to observe URL, Protocol, File Size and Loading Time.";
+
+});
+
+}
+
+function loadImage(){
+
+log.innerHTML="Loading Product Image...";
+
+fetch("https://picsum.photos/400")
+
+.then(response=>{
+
+log.innerHTML=
+
+"✔ Image Loaded Successfully\n\n"+
+
+"Request Method : GET\n"+
+
+"Status Code : "+response.status+
+
+"\n\nObserve the image request in the Network tab.";
+
+});
+
+}
+
+function addCart(){
+
+log.innerHTML="Adding Product to Cart...";
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+product:"Gaming Laptop",
+
+quantity:1
+
+})
+
+})
+
+.then(response=>response.json())
+
+.then(data=>{
+
+log.innerHTML=
+
+"✔ Product Added to Cart\n\n"+
+
+"Request Method : POST\n"+
+
+"Status Code : 201\n\n"+
+
+"Open Network → Headers to view the POST request.";
+
+});
+
+}
+
+function checkout(){
+
+log.innerHTML="Processing Checkout...";
+
+fetch("https://jsonplaceholder.typicode.com/posts",{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify({
+
+customer:"John",
+
+payment:"Success"
+
+})
+
+})
+
+.then(response=>response.json())
+
+.then(data=>{
+
+log.innerHTML=
+
+"✔ Order Placed Successfully\n\n"+
+
+"Request Method : POST\n"+
+
+"Status Code : 201\n\n"+
+
+"Observe Request Payload, Response and Loading Time in Developer Tools.";
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
