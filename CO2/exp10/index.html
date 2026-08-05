@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Master | Experiment 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Debugging Lab</h1>
+            <p>Learn to identify and fix common CSS and JS issues.</p>
+        </header>
+
+        <div class="debug-grid">
+            <div class="debug-card">
+                <h3>1. Console Logging</h3>
+                <p>Click the button and check the browser console (F12).</p>
+                <button onclick="testConsole()">Log Data</button>
+            </div>
+
+            <div class="debug-card">
+                <h3>2. Error Handling</h3>
+                <p>This button uses <code>try...catch</code> to handle errors gracefully.</p>
+                <button onclick="testError()">Trigger Error</button>
+                <div id="error-display" class="status-msg"></div>
+            </div>
+
+            <div class="debug-card">
+                <h3>3. Breakpoints & Debugger</h3>
+                <p>This will trigger the <code>debugger</code> statement.</p>
+                <button onclick="testDebugger()">Start Debugger</button>
+            </div>
+
+            <div class="debug-card buggy-css" id="css-box">
+                <h3>4. CSS Inspection</h3>
+                <p>Use the Elements panel to fix my alignment and colors!</p>
+                <button onclick="fixCSS()">Fix My CSS</button>
+            </div>
+        </div>
+
+        <div class="guide">
+            <h3>Debugging Checklist</h3>
+            <ul>
+                <li><strong>F12 / Ctrl+Shift+I:</strong> Open Developer Tools.</li>
+                <li><strong>Console Tab:</strong> Check for syntax errors and log messages.</li>
+                <li><strong>Elements Tab:</strong> Inspect and modify CSS in real-time.</li>
+                <li><strong>Sources Tab:</strong> Set breakpoints and step through code.</li>
+                <li><strong>Network Tab:</strong> Monitor API calls and resource loading.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

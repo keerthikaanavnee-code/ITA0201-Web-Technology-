@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Quiz | Experiment 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="quiz-start" class="card text-center">
+            <h1>Web Technology Quiz</h1>
+            <p>Test your knowledge of HTML, CSS, and JavaScript!</p>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-box" class="card hidden">
+            <div class="quiz-header">
+                <span id="question-count">Question 1 of 5</span>
+                <div class="timer">Time: <span id="time-left">30</span>s</div>
+            </div>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <h2 id="question-text">Question goes here?</h2>
+            <div id="options-container" class="options">
+                <!-- Options will be injected here -->
+            </div>
+            <button id="next-btn" class="btn hidden">Next Question</button>
+        </div>
+
+        <div id="result-box" class="card hidden text-center">
+            <h2>Quiz Completed!</h2>
+            <div class="score-circle">
+                <span id="final-score">0</span>/5
+            </div>
+            <p id="score-message">Great job!</p>
+            <button onclick="location.reload()" class="btn">Try Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

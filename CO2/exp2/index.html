@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | Experiment 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Student Registration</h2>
+            <p>Please fill in the details to create your account</p>
+        </div>
+        
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="John Doe" required>
+                <span class="error-message" id="nameError">Name is required</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+                <span class="error-message" id="emailError">Please enter a valid email</span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" placeholder="STU-12345" required>
+                    <span class="error-message" id="idError">Format: STU-XXXXX</span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="1234567890" required>
+                    <span class="error-message" id="phoneError">10-digit number required</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select Department</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="ECE">Electronics & Communication</option>
+                    <option value="ME">Mechanical Engineering</option>
+                </select>
+                <span class="error-message" id="deptError">Please select a department</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+                <span class="error-message" id="passwordError">Min 8 chars, 1 uppercase, 1 number</span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Register Now</button>
+        </form>
+
+        <div id="successMessage" class="success-message">
+            <h3>Registration Successful!</h3>
+            <p>Welcome to the portal. Your account has been created.</p>
+            <button onclick="resetForm()" class="btn-reset">Back to Form</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

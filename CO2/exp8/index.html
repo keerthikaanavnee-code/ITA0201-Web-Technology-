@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock & Timer | Experiment 8</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="clock-section">
+            <h2>Current Time</h2>
+            <div id="digital-clock" class="clock">00:00:00</div>
+            <div id="date-display" class="date">Loading...</div>
+        </section>
+
+        <section class="timer-section">
+            <h2>Exam Countdown</h2>
+            <div class="exam-info">
+                <h3>Final Semester Examination</h3>
+                <p>Starts on: August 15, 2026</p>
+            </div>
+            <div id="countdown" class="countdown-grid">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <label>Days</label>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <label>Hours</label>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <label>Mins</label>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <label>Secs</label>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

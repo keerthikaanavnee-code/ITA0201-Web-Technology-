@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart To-Do List | Experiment 6</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="todo-container">
+
+    <header>
+
+        <h1>📋 Smart To-Do List</h1>
+
+        <p id="date-display"></p>
+
+    </header>
+
+    <!-- Dashboard -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <h2 id="total-count">0</h2>
+
+            <p>Total Tasks</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="completed-count">0</h2>
+
+            <p>Completed</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2 id="pending-count">0</h2>
+
+            <p>Pending</p>
+
+        </div>
+
+    </div>
+
+    <!-- Progress Bar -->
+
+    <div class="progress-container">
+
+        <div class="progress-bar">
+
+            <div id="progress-fill"></div>
+
+        </div>
+
+        <span id="progress-text">0% Completed</span>
+
+    </div>
+
+    <!-- Input Section -->
+
+    <div class="input-group">
+
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="✍ Enter your task">
+
+        <button id="add-btn">
+
+            ➕ Add
+
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-group">
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="🔍 Search tasks...">
+
+    </div>
+
+    <!-- Priority & Due Date -->
+
+    <div class="input-group">
+
+        <select id="priority">
+
+            <option value="High">🔴 High Priority</option>
+
+            <option value="Medium" selected>🟡 Medium Priority</option>
+
+            <option value="Low">🟢 Low Priority</option>
+
+        </select>
+
+        <input
+            type="date"
+            id="due-date">
+
+    </div>
+
+    <!-- Filters -->
+
+    <div class="filters">
+
+        <button class="filter-btn active" data-filter="all">
+
+            All
+
+        </button>
+
+        <button class="filter-btn" data-filter="pending">
+
+            Pending
+
+        </button>
+
+        <button class="filter-btn" data-filter="completed">
+
+            Completed
+
+        </button>
+
+    </div>
+
+    <!-- Theme Button -->
+
+    <button id="theme-toggle">
+
+        🌙 Dark Mode
+
+    </button>
+
+    <!-- Task List -->
+
+    <ul id="todo-list">
+
+    </ul>
+        <!-- Footer -->
+
+    <div class="todo-footer">
+
+        <span id="items-left">0 items left</span>
+
+        <button id="clear-completed">
+
+            🗑 Clear Completed
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =======================
+        Edit Modal
+======================= -->
+
+<div id="edit-modal" class="modal">
+
+    <div class="modal-content">
+
+        <h3>✏ Edit Task</h3>
+
+        <input
+            type="text"
+            id="edit-input"
+            placeholder="Update your task">
+
+        <div class="modal-actions">
+
+            <button
+                id="save-edit"
+                class="btn-save">
+
+                💾 Save
+
+            </button>
+
+            <button
+                id="cancel-edit"
+                class="btn-cancel">
+
+                ❌ Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =======================
+     Completion Popup
+======================= -->
+
+<div id="complete-popup" class="modal">
+
+    <div class="modal-content" style="text-align:center;">
+
+        <h2>🎉 Congratulations!</h2>
+
+        <p>
+
+            You have completed all your tasks.
+
+        </p>
+
+        <button
+            onclick="document.getElementById('complete-popup').style.display='none'"
+            class="btn-save">
+
+            Awesome!
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

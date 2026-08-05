@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Analysis | Experiment 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Result Analysis</h1>
+        </header>
+
+        <section class="input-section">
+            <div class="card">
+                <h3>Add Student Marks</h3>
+                <form id="resultForm">
+                    <div class="form-grid">
+                        <input type="text" id="studentName" placeholder="Student Name" required>
+                        <input type="number" id="maths" placeholder="Maths" min="0" max="100" required>
+                        <input type="number" id="physics" placeholder="Physics" min="0" max="100" required>
+                        <input type="number" id="chemistry" placeholder="Chemistry" min="0" max="100" required>
+                    </div>
+                    <button type="submit" class="btn-add">Add to List</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Highest Total</span>
+                    <span id="highestScore" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Lowest Total</span>
+                    <span id="lowestScore" class="stat-value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Class Average</span>
+                    <span id="classAverage" class="stat-value">0%</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Maths</th>
+                            <th>Physics</th>
+                            <th>Chemistry</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsBody">
+                        <!-- Results will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
