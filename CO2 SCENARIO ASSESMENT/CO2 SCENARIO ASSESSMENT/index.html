@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Event Portal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Internal CSS (Requirement: One section) -->
+    <style>
+        .internal-styled-section {
+            background-color: #f0f4f8;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #d1d9e6;
+        }
+        .internal-styled-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header animate-fade-in">
+        <div class="container">
+            <div class="brand">
+                <h1>Global Tech University</h1>
+                <p>Campus Event Portal</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content animate-fade-in">
+            <h2>Ignite Your Potential at TechFest 2026</h2>
+            <p>Campaign Period: August 15th - September 10th, 2026</p>
+            <!-- Inline CSS (Requirement: Only one small element) -->
+            <a href="#register" class="btn-primary" style="font-weight: bold; text-transform: uppercase;">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Internal CSS Section -->
+    <section class="internal-styled-section">
+        <h2>Join Our Vibrant Community</h2>
+        <p>Experience the best of campus life through our diverse range of events.</p>
+    </section>
+
+    <!-- Event Catalogue -->
+    <section id="events" class="event-catalogue">
+        <div class="container animate-fade-in">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="event-grid">
+                <!-- Card 1: Technical -->
+                <div class="event-card technical">
+                    <h3>Code Masters Hackathon</h3>
+                    <span class="category">Technical</span>
+                    <p class="event-meta"><strong>Date & Time:</strong> Aug 20, 10:00 AM</p>
+                    <p class="event-meta"><strong>Venue:</strong> Main Lab 1</p>
+                    <p class="description">Compete with the best minds in a 24-hour coding challenge to solve real-world problems.</p>
+                    <p class="status">Status: <span class="open">Open</span></p>
+                    <a href="#register" class="btn-card">Register</a>
+                </div>
+
+                <!-- Card 2: Cultural -->
+                <div class="event-card cultural">
+                    <h3>Rhythm & Blues Night</h3>
+                    <span class="category">Cultural</span>
+                    <p class="event-meta"><strong>Date & Time:</strong> Aug 22, 6:00 PM</p>
+                    <p class="event-meta"><strong>Venue:</strong> Open Air Theater</p>
+                    <p class="description">A night filled with music, dance, and cultural performances from across the globe.</p>
+                    <p class="status">Status: <span class="open">Open</span></p>
+                    <a href="#register" class="btn-card">Register</a>
+                </div>
+
+                <!-- Card 3: Placement -->
+                <div class="event-card placement">
+                    <h3>Corporate Readiness Workshop</h3>
+                    <span class="category">Placement</span>
+                    <p class="event-meta"><strong>Date & Time:</strong> Aug 25, 11:00 AM</p>
+                    <p class="event-meta"><strong>Venue:</strong> Seminar Hall B</p>
+                    <p class="description">Get insights from industry experts on how to ace your interviews and build a stellar resume.</p>
+                    <p class="status">Status: <span class="limited">Limited Slots</span></p>
+                    <a href="#register" class="btn-card">Register</a>
+                </div>
+
+                <!-- Card 4: Sports -->
+                <div class="event-card sports">
+                    <h3>Inter-Department Football</h3>
+                    <span class="category">Sports</span>
+                    <p class="event-meta"><strong>Date & Time:</strong> Aug 28, 4:00 PM</p>
+                    <p class="event-meta"><strong>Venue:</strong> University Ground</p>
+                    <p class="description">The ultimate showdown for the department trophy. Come and cheer for your team!</p>
+                    <p class="status">Status: <span class="closed">Closed</span></p>
+                    <a href="javascript:void(0)" class="btn-card disabled-link">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="registration-section">
+        <div class="container animate-fade-in">
+            <h2 class="section-title">Event Registration</h2>
+            <form id="registration-form" class="form-container">
+                <div class="form-group">
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" name="student_name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-number">Register Number</label>
+                    <input type="text" id="reg-number" name="reg_number" placeholder="Enter your register number" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" name="department" placeholder="e.g. Computer Science" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@university.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-select">Event Selection</label>
+                    <select id="event-select" name="event_selection" required>
+                        <option value="" disabled selected>Select an event</option>
+                        <option value="hackathon">Code Masters Hackathon</option>
+                        <option value="cultural">Rhythm & Blues Night</option>
+                        <option value="workshop">Corporate Readiness Workshop</option>
+                        <option value="football">Inter-Department Football</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Submit Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Fixed Help Button (Requirement: Fixed Positioning) -->
+    <button id="help-btn" title="Get Help">?</button>
+
+    <!-- Footer -->
+    <footer id="contact" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Contact Us</h3>
+                <p>Email: events@gtu.edu</p>
+                <p>Phone: +1 (555) 012-3456</p>
+                <p>Address: 123 University Ave, Tech City</p>
+            </div>
+            <div class="footer-links">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">University Portal</a></li>
+                    <li><a href="#">Academic Calendar</a></li>
+                    <li><a href="#">Student Handbook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Global Tech University. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
