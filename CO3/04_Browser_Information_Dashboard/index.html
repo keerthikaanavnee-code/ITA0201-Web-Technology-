@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Browser Information Dashboard</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="dashboard">
+<header><div><span class="tag">WINDOW OBJECT</span><h1>Browser Information</h1><p>Live information from your browser environment.</p></div><div class="online" id="online">● Online</div></header>
+<section class="cards">
+<div class="info"><span>Current URL</span><strong id="url"></strong></div>
+<div class="info"><span>Language</span><strong id="language"></strong></div>
+<div class="info"><span>Screen Size</span><strong id="screen"></strong></div>
+<div class="info"><span>Window Size</span><strong id="window"></strong></div>
+<div class="info"><span>Scroll Position</span><strong id="scroll"></strong></div>
+<div class="info"><span>Platform</span><strong id="platform"></strong></div>
+</section>
+<section class="live"><h2>Live Window Monitor</h2><p>Resize or scroll this page to see the values update.</p><div class="bar"><span id="progress"></span></div><div class="numbers"><b id="w">0</b><b id="h">0</b><b id="sx">0</b><b id="sy">0</b></div><div class="labels"><span>Width</span><span>Height</span><span>Scroll X</span><span>Scroll Y</span></div></section>
+</div><script src="script.js"></script></body></html>

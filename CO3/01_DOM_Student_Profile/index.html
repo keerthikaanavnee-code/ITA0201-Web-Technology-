@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<header><div class="logo">SP</div><div><h1 id="heading">Student Profile</h1><p>DOM-Based Profile Manipulation</p></div></header>
+
+<main class="grid">
+<section class="profile-card" id="profile">
+  <div class="avatar" id="avatar">K</div>
+  <div class="badge">ACTIVE STUDENT</div>
+  <h2 id="studentName">Keerthikaa</h2>
+  <p class="muted" id="course">B.Tech Information Technology</p>
+  <div class="details">
+    <div><span>Register No.</span><b id="regNo">IT2026-123</b></div>
+    <div><span>Year</span><b>2nd Year</b></div>
+    <div><span>Department</span><b>Information Technology</b></div>
+    <div><span>Email</span><b>student@example.com</b></div>
+  </div>
+</section>
+
+<section class="controls">
+<h2>Profile Controls</h2>
+<label>Change Heading</label>
+<div class="row"><input id="headingInput" value="My Student Profile"><button onclick="changeHeading()">Apply</button></div>
+<label>Student Name</label>
+<div class="row"><input id="nameInput" value="Keerthikaa"><button onclick="changeName()">Update</button></div>
+<label>Text Colour</label>
+<div class="row"><input type="color" id="textColor" value="#3157d5"><button onclick="changeTextColor()">Apply</button></div>
+<label>Background Colour</label>
+<div class="row"><input type="color" id="bgColor" value="#eef3ff"><button onclick="changeBackground()">Apply</button></div>
+<div class="buttons">
+<button onclick="toggleHighlight()">Toggle Highlight</button>
+<button onclick="toggleProfile()">Show / Hide Profile</button>
+<button onclick="resetProfile()">Reset</button>
+</div>
+<div id="status">DOM controls ready.</div>
+</section>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

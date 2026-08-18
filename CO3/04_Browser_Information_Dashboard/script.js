@@ -1,0 +1,4 @@
+const $=id=>document.getElementById(id);
+function update(){const ww=window.innerWidth,wh=window.innerHeight,sx=window.scrollX,sy=window.scrollY;$("url").textContent=window.location.href;$("language").textContent=navigator.language;$("screen").textContent=screen.width+" × "+screen.height;$("window").textContent=ww+" × "+wh;$("scroll").textContent=sx+" , "+sy;$("platform").textContent=navigator.platform;$("w").textContent=ww;$("h").textContent=wh;$("sx").textContent=Math.round(sx);$("sy").textContent=Math.round(sy);const max=document.documentElement.scrollHeight-wh;$("progress").style.width=(max?Math.min(100,sy/max*100):0)+"%"}
+function online(){const o=navigator.onLine;$("online").textContent=o?"● Online":"● Offline";$("online").style.color=o?"#61d89a":"#ff8585"}
+window.addEventListener("resize",update);window.addEventListener("scroll",update);window.addEventListener("online",online);window.addEventListener("offline",online);update();online();

@@ -1,0 +1,4 @@
+const events=document.querySelectorAll(".event"),selected=document.getElementById("selected"),form=document.getElementById("form"),message=document.getElementById("message"),nameInput=document.getElementById("name");
+events.forEach(card=>{card.addEventListener("click",()=>{events.forEach(x=>x.classList.remove("active"));card.classList.add("active");selected.value=card.dataset.event;message.style.display="none"})});
+nameInput.addEventListener("focus",()=>nameInput.style.borderColor="#536dfe");nameInput.addEventListener("blur",()=>nameInput.style.borderColor="#d9deea");nameInput.addEventListener("input",()=>{if(nameInput.value)document.title="Hello, "+nameInput.value});
+form.addEventListener("submit",e=>{e.preventDefault();message.textContent="Registration successful! "+nameInput.value+" is registered for "+selected.value+".";message.style.display="block"});
