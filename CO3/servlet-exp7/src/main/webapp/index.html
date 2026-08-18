@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7 - Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <p><a href="index.html">&larr; Home</a></p>
+    <h1>Exercise 7 - Student Registration</h1>
+    <section class="card">
+        <form action="register" method="post">
+            <label for="studentName">Student name</label>
+            <input id="studentName" name="studentName" type="text" maxlength="80" required>
+
+            <label for="registerNumber">Register number</label>
+            <input id="registerNumber" name="registerNumber" type="text" maxlength="30" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" maxlength="120" required>
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">-- Select department --</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Electronics and Communication">Electronics and Communication</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+            </select>
+
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester" required>
+                <option value="">-- Select semester --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <button type="submit">Register student</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

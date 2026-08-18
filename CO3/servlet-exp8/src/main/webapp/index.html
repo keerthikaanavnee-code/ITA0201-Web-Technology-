@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8 - Student Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <p><a href="index.html">&larr; Home</a></p>
+    <h1>Exercise 8 - Online Student Result</h1>
+    <section class="card">
+        <p>Enter marks from 0 to 100 for all five subjects.</p>
+        <form action="result" method="post">
+            <label for="studentName">Student name</label>
+            <input id="studentName" name="studentName" type="text" maxlength="80" required>
+
+            <label for="registerNumber">Register number</label>
+            <input id="registerNumber" name="registerNumber" type="text" maxlength="30" required>
+
+            <label for="subject1">Subject 1</label>
+            <input id="subject1" name="subject1" type="number" min="0" max="100" step="1" required>
+
+            <label for="subject2">Subject 2</label>
+            <input id="subject2" name="subject2" type="number" min="0" max="100" step="1" required>
+
+            <label for="subject3">Subject 3</label>
+            <input id="subject3" name="subject3" type="number" min="0" max="100" step="1" required>
+
+            <label for="subject4">Subject 4</label>
+            <input id="subject4" name="subject4" type="number" min="0" max="100" step="1" required>
+
+            <label for="subject5">Subject 5</label>
+            <input id="subject5" name="subject5" type="number" min="0" max="100" step="1" required>
+
+            <button type="submit">Calculate result</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
