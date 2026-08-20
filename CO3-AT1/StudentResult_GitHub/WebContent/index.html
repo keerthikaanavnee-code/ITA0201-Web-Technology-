@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result Processing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #999;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Result Processing</h2>
+
+    <form action="student-result" method="post">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Register Number:</label>
+        <input type="text" name="regno" required>
+
+        <label>Subject 1 Mark:</label>
+        <input type="number" name="mark1" min="0" max="100" required>
+
+        <label>Subject 2 Mark:</label>
+        <input type="number" name="mark2" min="0" max="100" required>
+
+        <label>Subject 3 Mark:</label>
+        <input type="number" name="mark3" min="0" max="100" required>
+
+        <button type="submit">Process Result</button>
+    </form>
+</div>
+
+</body>
+</html>
